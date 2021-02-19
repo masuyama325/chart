@@ -1,0 +1,63 @@
+
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-4 users-new-container">
+        
+        <!--中身-->
+        <h1 class="text-start text-white">welcome!</h1>
+        
+        <p>You are logged in as <%= current_user.email %></p>
+        <%= link_to "Logout", logout_path, method: :delete %>
+      
+        <!--%= pie_chart @data %> -->
+
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        
+        <%= form_with(model: User.new) do |form| %>
+          <%= form.text_field :title %>
+        <% end %>
+         
+        <!-- %= line_chart @data, width: "200px", height: "200px" %>-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--google chartからコピペここから-->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+  // var ma = new Array();
+  
+  // google.charts.load('current', {'packages':['corechart']});
+  // google.charts.setOnLoadCallback(drawChart);
+
+  // function drawChart() {
+  //       data = google.visualization.arrayToDataTable( ma );
+
+  //       var options = {
+  //         legend:'none'
+  //       };
+  //       var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+  //       chart.draw(data, options);
+  // };
+  
+  // function drawChart() {
+  //   var data = google.visualization.arrayToDataTable([
+  //     ['Mon \n 米国株、ダウ反発167ドル高 景気敏感株に押し目買い', 20, 28, 38, 45],
+  //     ['米国株、ダウ反落し382ドル安 上院決選投票の不透明感から売り', 31, 38, 55, 66],
+  //     ['Wed', 50, 55, 77, 80],
+  //     ['Thu', 77, 77, 66, 50],
+  //     ['Fri', 68, 66, 22, 15]
+  //     // Treat first row as data as well.
+  //   ], true);
+
+  //   var options = {
+  //     legend:'none'
+  //   };
+
+  //   var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+
+  //   chart.draw(data, options);
+  // }
+</script>
+<!--google chartからコピペここまで-->

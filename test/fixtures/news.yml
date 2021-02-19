@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  candleStick_id: 1
+  discription: MyString
+
+two:
+  candleStick_id: 1
+  discription: MyString

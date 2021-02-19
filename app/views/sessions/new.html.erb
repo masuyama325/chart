@@ -1,0 +1,32 @@
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        
+        <!--ログイン画面-->
+        <h1 class="text-center text-white">Log in</h1>
+        <!--# form_forでpost。rails routesで確認、sessions_controllerの,sessions#create -->
+        <%= form_for :session, url: login_path, local: true do |f| %>
+        
+          <!--email-->
+          <div class="form-group">
+            <%= f.label :email, class: "text-white" %>
+            <%= f.text_field :email, class: "form-control" %>
+          </div>
+          
+          <!--password-->
+          <div class="form-group">
+            <%= f.label :password, class: "text-white" %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+
+          <!--ボタン-->
+          <%= f.submit "ログイン", class: "btn-block btn-white" %>
+          
+        <% end %>
+        <!--# どこに飛ばしたい,rails routesで確認、新規登録画面,users#new -->
+        <%= link_to 'sign upはこちら', new_user_path, class: 'text-white' %>
+      </div>
+    </div>
+  </div>
+</div>

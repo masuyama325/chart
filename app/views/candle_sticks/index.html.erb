@@ -1,0 +1,36 @@
+<div class="container" >
+<table id= 'graph01' class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">open</th>
+      <th scope="col">high</th>
+      <th scope="col">low</th>
+      <th scope="col">close</th>
+      <th scope="col">日付</th>
+      <th scope="col">予想</th>
+      <th scope="col">結果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sticks.each do |stick| %>
+    <tr>
+      <td class="id"><%= stick.id  %></td>
+      <td class="open"><%= stick.open  %></td>
+      <td class="high"><%= stick.high  %></td>
+      <td class="low"><%= stick.low  %></td>
+      <td class="close"><%= stick.close  %></td>
+      <td class="date"><%= stick.date  %></td>
+      <td class="yoso"><%= stick.yoso  %></td>
+      <td class="result"><%= stick.result  %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<button id="button">ボタン</button>
+<!--<form action="./">-->
+<!--<button type="button" id="btn1">結果</button>-->
+<!--</form>-->
+
+
+</div>
